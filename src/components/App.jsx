@@ -66,6 +66,7 @@ export default function App() {
     axios.post('http://localhost:4000/friends', newFriend)
       .then(res => {
         setFriends([res.data, ...friends])
+        // getFriends() // the price of triggering a new 'getFriends`
       })
       .catch(err => {
         debugger
