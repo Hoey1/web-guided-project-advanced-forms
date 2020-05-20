@@ -84,6 +84,27 @@ export default function App() {
     const value = evt.target.value
 
     // 🔥 STEP 12- RUN VALIDATION WITH YUP
+    yup
+      .reach(formSchema, name)
+      //we can then run validate using the value
+      .validate(value)
+      // if the validation is successful, we can clear the error message
+      .then(valid => {
+        setFormErrors({
+          ...formErrors,
+          [name]: ""
+        })
+      })
+      /* if the validation is unsuccessful, we can set the error message to the message 
+        returned from yup (that we created in our schema) */
+      .catch(err => {
+        setFormErrors({
+          ...formErrors,
+          [name]: err.errors[0]
+        })
+      })
+
+    // Wether or not our validation was successful, we will still set the state to the new value as the user is typing
 
     setFormValues({
       ...formValues,
