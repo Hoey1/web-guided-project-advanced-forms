@@ -86,18 +86,19 @@ export default function App() {
     // 🔥 STEP 12- RUN VALIDATION WITH YUP
     yup
       .reach(formSchema, name)
-      //we can then run validate using the value
+      // we can then run validate using the value
       .validate(value)
-      // if the validation is successful, we can clear the error message
       .then(valid => {
+        // happy path, we can clear the error message
         setFormErrors({
           ...formErrors,
-          [name]: ""
+          [name]: ''
         })
       })
-      /* if the validation is unsuccessful, we can set the error message to the message 
-        returned from yup (that we created in our schema) */
       .catch(err => {
+        debugger
+        // sad path, does not validate so we set the error message to the message 
+        // returned from yup (that we created in our schema)
         setFormErrors({
           ...formErrors,
           [name]: err.errors[0]
