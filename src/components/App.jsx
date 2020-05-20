@@ -107,7 +107,8 @@ export default function App() {
         values={formValues}
         onInputChange={onInputChange}
         onSubmit={onSubmit}
-      // 🔥🔥🔥 ADDITIONAL PROPS NEEDED 🔥🔥🔥
+        // 🔥🔥🔥 ADDITIONAL PROPS NEEDED 🔥🔥🔥
+        disabled={true}
       />
 
       {
