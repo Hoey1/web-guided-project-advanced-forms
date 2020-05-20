@@ -94,7 +94,10 @@ export default function App() {
   const onCheckboxChange = evt => {
     // 🔥 STEP 8- IMPLEMENT!
     // a) pull the `name` of the checkbox from the event
+    const { name } = evt.target
     // b) pull whether `checked` true or false, from the event
+    const { checked } = evt.target
+
     // c) set a new state for the whole form
   }
 
