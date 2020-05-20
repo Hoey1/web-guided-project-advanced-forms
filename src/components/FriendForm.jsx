@@ -47,7 +47,7 @@ export default function FriendForm(props) {
             value={values.email}
             onChange={onInputChange}
             name='email'
-            type='text'
+            type='email'
           />
         </label>
 
@@ -72,11 +72,21 @@ export default function FriendForm(props) {
         {/* ////////// RADIO BUTTONS ////////// */}
         {/* ////////// RADIO BUTTONS ////////// */}
         <label>Single
-
+          <input
+            type='radio'
+            name='civil'
+            value='Single'
+            onChange={onInputChange}
+          />
         </label>
 
         <label>Married
-
+          <input
+            type='radio'
+            name='civil'
+            value='Married'
+            onChange={onInputChange}
+          />
         </label>
       </div>
 
