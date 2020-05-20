@@ -1,4 +1,4 @@
-https://lambdaschool.zoom.us/my/gabelambdaconst express = require('express')
+const express = require('express')
 const uuid = require('uuid').v4
 const cors = require('cors')
 const app = express()
