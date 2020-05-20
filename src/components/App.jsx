@@ -110,6 +110,7 @@ export default function App() {
         // 🔥🔥🔥 ADDITIONAL PROPS NEEDED 🔥🔥🔥
         disabled={true}
         errors={{ username: 'that name is awful' }}
+        onCheckboxChange={onCheckboxChange}
       />
 
       {

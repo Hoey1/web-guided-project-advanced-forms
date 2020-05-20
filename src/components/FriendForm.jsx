@@ -6,8 +6,10 @@ export default function FriendForm(props) {
     values,
     onInputChange,
     onSubmit,
+    // 🔥🔥🔥 ADDITIONAL PROPS NEEDED 🔥🔥🔥
     disabled,
     errors,
+    onCheckboxChange,
   } = props
 
   return (
@@ -77,7 +79,7 @@ export default function FriendForm(props) {
             name='civil'
             value='Single'
             onChange={onInputChange}
-            // checked={values.civil === 'Single'}
+          // checked={values.civil === 'Single'}
           />
         </label>
 
@@ -87,7 +89,7 @@ export default function FriendForm(props) {
             name='civil'
             value='Married'
             onChange={onInputChange}
-            // checked={values.civil === 'Married'}
+          // checked={values.civil === 'Married'}
           />
         </label>
       </div>
@@ -99,15 +101,30 @@ export default function FriendForm(props) {
         {/* ////////// CHECKBOXES ////////// */}
         {/* ////////// CHECKBOXES ////////// */}
         <label>Hiking
-
+          <input
+            type='checkbox'
+            name='hiking'
+            checked={values.hobbies.hiking}
+            onChange={onCheckboxChange}
+          />
         </label>
 
         <label>Reading
-
+        <input
+            type='checkbox'
+            name='reading'
+            checked={values.hobbies.reading}
+            onChange={onCheckboxChange}
+          />
         </label>
 
         <label>Coding
-
+        <input
+            type='checkbox'
+            name='coding'
+            checked={values.hobbies.coding}
+            onChange={onCheckboxChange}
+          />
         </label>
       </div>
     </form>
