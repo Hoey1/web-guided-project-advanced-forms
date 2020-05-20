@@ -100,10 +100,14 @@ export default function App() {
 
     // c) set a new state for the whole form
     setFormValues({
+      // copy formvalues
       ...formValues,
+      // override one thing inside formvalues
       hobbies: {
+        // copy the current hobbies
         ...formValues.hobbies,
-        [name]: checked,
+        // override one of the hobbies
+        [name]: checked,  // NOT AN ARRAY
       }
     })
   }
