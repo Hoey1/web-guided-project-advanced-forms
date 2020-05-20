@@ -63,6 +63,16 @@ export default function App() {
     // 🔥 STEP 7- IMPLEMENT! ON SUCCESS ADD NEWLY CREATED FRIEND TO STATE
     //    helper to [POST] `newFriend` to `http://localhost:4000/friends`
     //    and regardless of success or failure, the form should reset
+    axios.post('http://localhost:4000/friends', newFriend)
+      .then(res => {
+        setFriends([res.data, ...friends])
+      })
+      .catch(err => {
+        debugger
+      })
+      .finally(() => {
+        setFormValues(initialFormValues)
+      })
   }
 
   //////////////// EVENT HANDLERS ////////////////
