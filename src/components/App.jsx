@@ -113,8 +113,8 @@ export default function App() {
         onInputChange={onInputChange}
         onSubmit={onSubmit}
         // 🔥🔥🔥 ADDITIONAL PROPS NEEDED 🔥🔥🔥
-        disabled={true}
-        errors={{ username: 'that name is awful' }}
+        disabled={disabled}
+        errors={formErrors}
         onCheckboxChange={onCheckboxChange}
       />
 
