@@ -109,7 +109,7 @@ export default function App() {
         onSubmit={onSubmit}
         // 🔥🔥🔥 ADDITIONAL PROPS NEEDED 🔥🔥🔥
         disabled={true}
-        errors={{}}
+        errors={{ username: 'that name is awful' }}
       />
 
       {
