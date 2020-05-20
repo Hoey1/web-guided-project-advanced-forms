@@ -105,7 +105,6 @@ export default function App() {
       })
 
     // Wether or not our validation was successful, we will still set the state to the new value as the user is typing
-
     setFormValues({
       ...formValues,
       [name]: value // NOT AN ARRAY
