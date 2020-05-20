@@ -1,6 +1,7 @@
 // Here goes the schema for the form
 import * as yup from 'yup'
 
+// valid formValues should be like follows:
 const formSchema = yup.object().shape({
   username: yup.string()
     .trim()
