@@ -99,6 +99,13 @@ export default function App() {
     const { checked } = evt.target
 
     // c) set a new state for the whole form
+    setFormValues({
+      ...formValues,
+      hobbies: {
+        ...formValues.hobbies,
+        [name]: checked,
+      }
+    })
   }
 
   const onSubmit = evt => {
