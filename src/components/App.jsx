@@ -109,6 +109,7 @@ export default function App() {
         onSubmit={onSubmit}
         // 🔥🔥🔥 ADDITIONAL PROPS NEEDED 🔥🔥🔥
         disabled={true}
+        errors={{}}
       />
 
       {

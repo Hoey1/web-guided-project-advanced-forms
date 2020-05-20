@@ -7,6 +7,7 @@ export default function FriendForm(props) {
     onInputChange,
     onSubmit,
     disabled,
+    errors,
   } = props
 
   return (
@@ -19,6 +20,10 @@ export default function FriendForm(props) {
 
         <div className='errors'>
           {/* 🔥 RENDER THE VALIDATION ERRORS HERE */}
+          <div>{errors.username}</div>
+          <div>{errors.email}</div>
+          <div>{errors.role}</div>
+          <div>{errors.civil}</div>
         </div>
       </div>
 
