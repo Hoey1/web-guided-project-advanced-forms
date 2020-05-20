@@ -41,6 +41,8 @@ export default function App() {
   const [friends, setFriends] = useState(initialFriends)
   const [formValues, setFormValues] = useState(initialFormValues)
   // 🔥 STEP 5- SET UP STATE FOR `formErrors` AND `disabled`
+  const [formErrors, setFormErrors] = useState(initialFormErrors)
+  const [disabled, setDisabled] = useState(initialDisabled)
 
   //////////////// HELPERS ////////////////
   //////////////// HELPERS ////////////////
