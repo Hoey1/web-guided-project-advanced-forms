@@ -96,7 +96,6 @@ export default function App() {
         })
       })
       .catch(err => {
-        debugger
         // sad path, does not validate so we set the error message to the message 
         // returned from yup (that we created in our schema)
         setFormErrors({
