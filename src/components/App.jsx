@@ -137,7 +137,11 @@ export default function App() {
 
   useEffect(() => {
     // 🔥 STEP 11- ADJUST THE STATUS OF `disabled` EVERY TIME `formValues` CHANGES
-  }, [])
+    formSchema.isValid(formValues)
+      .then(valid => {
+        setDisabled(!valid)
+      })
+  }, [formValues])
 
   return (
     <div className='container'>
